@@ -1,0 +1,10 @@
+br/ufes/errado/ProdutoEscolar.class
+br/ufes/models/Endereco.class
+br/ufes/atividade_solid/PrincipioLiskov/FecharPedidoLiskov.class
+br/ufes/models/Produto.class
+br/ufes/models/Estoque.class
+br/ufes/atividade_solid/PrincipioLiskov/CarrinhoLiskov.class
+br/ufes/models/TipoProduto.class
+br/ufes/atividade_solid/PrincipioLiskov/ProdutoLimpeza.class
+br/ufes/models/Cliente.class
+br/ufes/atividade_solid/PrincipioLiskov/ProdutoEscolar.class
