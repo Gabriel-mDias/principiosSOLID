@@ -1,2 +1,2 @@
-# principiosSOLID
-PSS_Principios_002
+# Princípios de SOLID e outros
+# PSS_Principios_002
