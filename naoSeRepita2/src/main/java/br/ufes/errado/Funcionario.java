@@ -15,9 +15,9 @@ public class Funcionario {
     private String endereco;
     private String codigo;
     private double salario;
-    private double funcao;
+    private String funcao;
 
-    public Funcionario(String nome, String endereco, String codigo, double salario, double funcao) {
+    public Funcionario(String nome, String endereco, String codigo, double salario, String funcao) {
         this.nome = nome;
         this.endereco = endereco;
         this.codigo = codigo;

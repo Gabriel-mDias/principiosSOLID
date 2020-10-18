@@ -54,4 +54,20 @@ public class NaoSeRepitaTest {
 
     }
     
+    @Test
+    public void CT02(){
+        br.ufes.errado.CarrinhoDRY c = new br.ufes.errado.CarrinhoDRY();
+        TipoProduto tipo = new TipoProduto("Material Escolar", 0.02);
+        Produto p1 = new Produto("Lápis", 2, 150, tipo);
+        Produto p2 = new Produto("Borracha", 2, 10, tipo);
+        
+        c.addProdutos(p1);
+        c.addProdutos(p2);
+        
+        br.ufes.errado.FecharPedidoDRY fp = new br.ufes.errado.FecharPedidoDRY(c);
+        fp.removerProduto(p2);
+        assertEquals(2, fp.getValorTotal(), 0.001);
+
+    }
+    
 }

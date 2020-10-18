@@ -54,4 +54,21 @@ public class PrincipioReusoPorComposicaoTest {
         assertEquals(4 * 0.98 - (2 * 0.1), fp.getValorTotal(), 0.001);
     }
     
+    @Test
+    public void CT02(){
+        br.ufes.errado.CarrinhoCRP c = new br.ufes.errado.CarrinhoCRP();
+        TipoProduto tipo = new TipoProduto("Material Escolar", 0.02);
+        Produto p1 = new Produto("Lápis", 2, 150, tipo);
+        Produto p2 = new Produto("Borracha", 2, 10, tipo);
+        
+        c.addProdutos(p1);
+        c.addProdutos(p2);
+        c.addDesconto(new br.ufes.errado.DescontoTipo());
+        c.addDesconto(new br.ufes.errado.DescontoLiquidacao());
+        
+        br.ufes.errado.FecharPedidoCRP fp = new br.ufes.errado.FecharPedidoCRP(c);
+            //Desconto do tipo será o mesmo em ambos, então retirei 2% do valor Total e 10% do valor do Lápis, já que seu estoque era superior a 100 unidades, entrando em liquidação
+        assertEquals(4 * 0.98 - (2 * 0.1), fp.getValorTotal(), 0.001);
+    }
+    
 }
